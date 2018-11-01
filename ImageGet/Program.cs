@@ -16,6 +16,7 @@ namespace ImageGet
 	{
 		static void Main(string[] args)
 		{
+			string path = @"C:\Dev\TestSites\GetImage\GetImage\ImageGet\Images\";
 			for (int i = 0; i < 15; i++)
 			{
 				try
@@ -38,7 +39,7 @@ namespace ImageGet
 
 					using (var newBitmap = new Bitmap(img))
 					{
-						newBitmap.Save("C:/Dev/TestSites/ImageGet/ImageGet/Images/" + rnd.Next(10000000, 90000000) + ".Jpeg", ImageFormat.Jpeg);
+						newBitmap.Save(path + rnd.Next(10000000, 90000000) + ".Jpeg", ImageFormat.Jpeg);
 					}
 				}
 				catch (Exception)
